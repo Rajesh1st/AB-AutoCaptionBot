@@ -26,8 +26,7 @@ class Rkn_Bots(object):
     
     # database config ( required.. 😥)
     DB_NAME = os.environ.get("DB_NAME", "AB-AutoCaptionBot")     
-    DB_URL = os.environ.get("DB_URL", "mongodb+srv://abdussalam94385:abdulkalam100@abdul.rlnpb2g.mongodb.net/?retryWrites=true&w=majority&appName=Abdul")
-
+    DB_URL = os.environ.get("DB_URL", "mongodb+srv://ashuroy761:YYBzDc7XWi85sRPE@cluster0.umhohdy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
     # default caption 
     DEF_CAP = os.environ.get("DEF_CAP", "<b>{file_name}</b>",
     )
