@@ -180,7 +180,7 @@ async def about_callback(bot, callback_query):
     
 ‣ ᴍʏ ɴᴀᴍᴇ : <a href=https://t.me/{bot_username}>{bot_username}</a>
 ‣ ᴍʏ ʙᴇsᴛ ғʀɪᴇɴᴅ : <a href='tg://settings'>ᴛʜɪs ᴘᴇʀsᴏɴ</a> 
-‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/RxBotz'>ʀ'x ʙᴏᴛᴢ</a> 
+‣ ᴅᴇᴠᴇʟᴏᴘᴇʀ : <a href='https://t.me/Infinix_4k'>ʀ'x ʙᴏᴛᴢ</a> 
 ‣ ʟɪʙʀᴀʀʏ : <a href='https://docs.pyrogram.org/'>ᴘʏʀᴏɢʀᴀᴍ</a> 
 ‣ ʟᴀɴɢᴜᴀɢᴇ : <a href='https://www.python.org/download/releases/3.0/'>ᴘʏᴛʜᴏɴ 3</a> 
 ‣ ᴅᴀᴛᴀ ʙᴀsᴇ : <a href='https://www.mongodb.com/'>ᴍᴏɴɢᴏ ᴅʙ</a> 
@@ -191,7 +191,7 @@ async def about_callback(bot, callback_query):
         ABOUT_TXT,
         disable_web_page_preview=True,
         reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url='https://t.me/RxBotz')
+            InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url='https://t.me/Drama_hindi_request')
         ], [
             InlineKeyboardButton('🔙 Back', callback_data='start'),
             InlineKeyboardButton('❌ Close', callback_data='close_about')
@@ -222,7 +222,7 @@ async def back_to_start_callback(bot, callback_query):
 async def set_caption(bot, message):
     if len(message.command) < 2:
         return await message.reply(
-            "<b>Provide a caption to set</b>\n<u>Example:</u> ⬇️\n\n<code>/set_caption {file_name}\n\n{file_caption}\n\nsize » {file_size}\n\nJoin :- @your_channel</code>"
+            "<b>Provide a caption to set</b>\n<u>Example:</u> ⬇️\n\n<code>/set_caption {file_name}\n\n{file_caption}\n\nsize » {file_size}\n\nJoin :- @RxBotz</code>"
         )
     chnl_id = message.chat.id
     caption = message.text.split(" ", 1)[1]
@@ -326,12 +326,8 @@ async def list_placeholders(bot, message):
 
 ➢ <code>{duration}</code> - The total duration of the media in HH:MM:SS format (e.g., 01:50:34).
 
-➢ <code>{prefix}</code> - The custom prefix set for the channel.
-
-➢ <code>{suffix}</code> - The custom suffix set for the channel.
-
 <b>Note:</b> Yᴏᴜ ᴄᴀɴ ᴄᴜsᴛᴏᴍɪᴢᴇ ʏᴏᴜʀ ᴄᴀᴘᴛɪᴏɴ ᴛᴇᴍᴘʟᴀᴛᴇ ʙʏ ᴜsɪɴɢ ᴛʜᴇsᴇ ᴘʟᴀᴄᴇʜᴏʟᴅᴇʀs ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ғɪʟʟ ɪɴ ᴅᴇᴛᴀɪʟs ᴀʙᴏᴜᴛ ᴛʜᴇ ғɪʟᴇ.
-For example: <code>{prefix} {file_name} {year} {language} {subtitles} {suffix}</code>
+For example: <code>{file_name} {year} {language} {subtitles}</code>
 """
     await message.reply(placeholders_text)
     
@@ -340,14 +336,6 @@ For example: <code>{prefix} {file_name} {year} {language} {subtitles} {suffix}</
 async def list_commands(bot, message):
     command_list = """
 <b>Available Bot Commands:</b>
-
-<code>/set_prefix</code> - This command is used to set the prefix for the channel's caption.
-
-<code>/clear_prefix</code> - Clears the set prefix.
-
-<code>/set_suffix</code> - This command is used to set the suffix for the channel's caption.
-
-<code>/clear_suffix</code> - Clears the set suffix.
 
 <code>/rem_words</code> - Set a list of words to be removed from the caption.
 
@@ -436,8 +424,6 @@ async def view_caption(bot, message):
         
         return await message.reply(
             f"<b>Channel Details</b>\n\n"
-            f"<b>Prefix:</b> {prefix}\n"
-            f"<b>Suffix:</b> {suffix}\n"
             f"<b>Removable Words:</b> {removable_words_text}\n"
             f"<b>Replace Words:</b> {replace_words_text}\n\n"
             f"<b>Caption Template:</b>\n{current_caption}"
