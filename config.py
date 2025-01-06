@@ -22,21 +22,21 @@ class Rkn_Bots(object):
     PORT = int(os.environ.get("PORT", "8080"))
 
     # force subs channel ( required.. 😥)
-    FORCE_SUB = os.environ.get("FORCE_SUB", "luxBotz") 
+    FORCE_SUB = os.environ.get("FORCE_SUB", "https://t.me/+46qh1i--d583YjY1") 
     
     # database config ( required.. 😥)
-    DB_NAME = os.environ.get("DB_NAME", "AutoCaption_V024_Bot")     
-    DB_URL = os.environ.get("DB_URL", "mongodb+srv://ashuroy761:YYBzDc7XWi85sRPE@cluster0.umhohdy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DB_NAME = os.environ.get("DB_NAME", "AB-AutoCaptionBot")     
+    DB_URL = os.environ.get("DB_URL", "mongodb+srv://<Abdul2024>:abdul54321@cluster0.6xep2fb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 
     # default caption 
-    DEF_CAP = os.environ.get("DEF_CAP", "<b><a href='https//:t.me/Rkn_Botz'>{file_name} Main Telegram Channel: @RknDeveloper</a></b>",
+    DEF_CAP = os.environ.get("DEF_CAP", "<b>{file_name}</b>",
     )
 
     # sticker Id
     STICKER_ID = os.environ.get("STICKER_ID", "CAACAgIAAxkBAAELFqBllhB70i13m-woXeIWDXU6BD2j7wAC9gcAAkb7rAR7xdjVOS5ziTQE")
 
     # admin id  ( required.. 😥)
-    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '7252430326').split()]
+    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6216394886').split()]
     
 
 # Rkn Developer 
